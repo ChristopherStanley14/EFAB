@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import Alamofire
+import Freddy
+
+protocol NetworkModel: JSONDecodable {
+    init(json: JSON) throws
+    init()
+    
+    func method() -> Alamofire.HTTPMethod
+    func path() -> String
+    func toDictionary() -> [String: AnyObject]?
+    }
