@@ -10,6 +10,8 @@
 		B3EF77ACA10C03F4FEC5EC84 /* Pods_EFAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */; };
 		B936B0B01DC7BB420051F123 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936B0AF1DC7BB420051F123 /* NetworkModel.swift */; };
 		B936B0B21DC7BEBF0051F123 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936B0B11DC7BEBF0051F123 /* WebServices.swift */; };
+		B936B0B51DC7C88D0051F123 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936B0B41DC7C88D0051F123 /* Test.swift */; };
+		B936B0B81DC7CB710051F123 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936B0B71DC7CB710051F123 /* Constants.swift */; };
 		B950E0FA1DC793AE00651F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950E0F91DC793AE00651F32 /* AppDelegate.swift */; };
 		B950E0FC1DC793AE00651F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950E0FB1DC793AE00651F32 /* ViewController.swift */; };
 		B950E0FF1DC793AE00651F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B950E0FD1DC793AE00651F32 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B936B0AF1DC7BB420051F123 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkModel.swift; path = Networking/NetworkModel.swift; sourceTree = "<group>"; };
 		B936B0B11DC7BEBF0051F123 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServices.swift; path = Networking/WebServices.swift; sourceTree = "<group>"; };
+		B936B0B41DC7C88D0051F123 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test.swift; path = Models/Test.swift; sourceTree = "<group>"; };
+		B936B0B71DC7CB710051F123 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Components/Constants.swift; sourceTree = "<group>"; };
 		B950E0F61DC793AE00651F32 /* EFAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950E0F91DC793AE00651F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B950E0FB1DC793AE00651F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,9 +57,27 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		B936B0B31DC7C8670051F123 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B936B0B41DC7C88D0051F123 /* Test.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B936B0B61DC7CB4D0051F123 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B936B0B71DC7CB710051F123 /* Constants.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		B950E0ED1DC793AE00651F32 = {
 			isa = PBXGroup;
 			children = (
+				B936B0B61DC7CB4D0051F123 /* Components */,
+				B936B0B31DC7C8670051F123 /* Models */,
 				B936B0AE1DC7BA900051F123 /* Networking */,
 				B950E0F81DC793AE00651F32 /* EFAB */,
 				B950E0F71DC793AE00651F32 /* Products */,
@@ -227,8 +249,10 @@
 			files = (
 				B936B0B01DC7BB420051F123 /* NetworkModel.swift in Sources */,
 				B950E0FC1DC793AE00651F32 /* ViewController.swift in Sources */,
+				B936B0B51DC7C88D0051F123 /* Test.swift in Sources */,
 				B936B0B21DC7BEBF0051F123 /* WebServices.swift in Sources */,
 				B950E0FA1DC793AE00651F32 /* AppDelegate.swift in Sources */,
+				B936B0B81DC7CB710051F123 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
