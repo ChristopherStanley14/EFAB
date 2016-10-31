@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3EF77ACA10C03F4FEC5EC84 /* Pods_EFAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */; };
+		B936B0B01DC7BB420051F123 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B936B0AF1DC7BB420051F123 /* NetworkModel.swift */; };
 		B950E0FA1DC793AE00651F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950E0F91DC793AE00651F32 /* AppDelegate.swift */; };
 		B950E0FC1DC793AE00651F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950E0FB1DC793AE00651F32 /* ViewController.swift */; };
 		B950E0FF1DC793AE00651F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B950E0FD1DC793AE00651F32 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		159B8AE015B7326762D81DF4 /* Pods-EFAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.release.xcconfig"; sourceTree = "<group>"; };
 		2A71B2119050FB5A81E2CB43 /* Pods-EFAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.debug.xcconfig"; sourceTree = "<group>"; };
 		4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B936B0AF1DC7BB420051F123 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkModel.swift; path = Networking/NetworkModel.swift; sourceTree = "<group>"; };
 		B950E0F61DC793AE00651F32 /* EFAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950E0F91DC793AE00651F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B950E0FB1DC793AE00651F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,9 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B936B0AE1DC7BA900051F123 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B936B0AF1DC7BB420051F123 /* NetworkModel.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		B950E0ED1DC793AE00651F32 = {
 			isa = PBXGroup;
 			children = (
+				B936B0AE1DC7BA900051F123 /* Networking */,
 				B950E0F81DC793AE00651F32 /* EFAB */,
 				B950E0F71DC793AE00651F32 /* Products */,
 				CAB5CC594A6A372A4B28CDAC /* Pods */,
@@ -186,7 +197,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C662E83F42DF648EE455C055 /* [CP] Copy Pods Resources */ = {
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B936B0B01DC7BB420051F123 /* NetworkModel.swift in Sources */,
 				B950E0FC1DC793AE00651F32 /* ViewController.swift in Sources */,
 				B950E0FA1DC793AE00651F32 /* AppDelegate.swift in Sources */,
 			);
@@ -374,6 +386,7 @@
 				B950E10A1DC793AE00651F32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
