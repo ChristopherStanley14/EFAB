@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3EF77ACA10C03F4FEC5EC84 /* Pods_EFAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */; };
 		B950E0FA1DC793AE00651F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950E0F91DC793AE00651F32 /* AppDelegate.swift */; };
 		B950E0FC1DC793AE00651F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B950E0FB1DC793AE00651F32 /* ViewController.swift */; };
 		B950E0FF1DC793AE00651F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B950E0FD1DC793AE00651F32 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		159B8AE015B7326762D81DF4 /* Pods-EFAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.release.xcconfig"; sourceTree = "<group>"; };
+		2A71B2119050FB5A81E2CB43 /* Pods-EFAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.debug.xcconfig"; sourceTree = "<group>"; };
+		4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950E0F61DC793AE00651F32 /* EFAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950E0F91DC793AE00651F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B950E0FB1DC793AE00651F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EF77ACA10C03F4FEC5EC84 /* Pods_EFAB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				B950E0F81DC793AE00651F32 /* EFAB */,
 				B950E0F71DC793AE00651F32 /* Products */,
+				CAB5CC594A6A372A4B28CDAC /* Pods */,
+				E666E8B8015967E0D750EBA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = EFAB;
 			sourceTree = "<group>";
 		};
+		CAB5CC594A6A372A4B28CDAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A71B2119050FB5A81E2CB43 /* Pods-EFAB.debug.xcconfig */,
+				159B8AE015B7326762D81DF4 /* Pods-EFAB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E666E8B8015967E0D750EBA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A2C071149ABD4A9965DA745 /* Pods_EFAB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B950E1081DC793AE00651F32 /* Build configuration list for PBXNativeTarget "EFAB" */;
 			buildPhases = (
+				688269356BE4E0708D7C5243 /* [CP] Check Pods Manifest.lock */,
 				B950E0F21DC793AE00651F32 /* Sources */,
 				B950E0F31DC793AE00651F32 /* Frameworks */,
 				B950E0F41DC793AE00651F32 /* Resources */,
+				34B82496567FF979D015E940 /* [CP] Embed Pods Frameworks */,
+				C662E83F42DF648EE455C055 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34B82496567FF979D015E940 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EFAB/Pods-EFAB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		688269356BE4E0708D7C5243 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C662E83F42DF648EE455C055 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EFAB/Pods-EFAB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B950E0F21DC793AE00651F32 /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		B950E1091DC793AE00651F32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A71B2119050FB5A81E2CB43 /* Pods-EFAB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EFAB/Info.plist;
@@ -268,6 +344,7 @@
 		};
 		B950E10A1DC793AE00651F32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 159B8AE015B7326762D81DF4 /* Pods-EFAB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EFAB/Info.plist;
