@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import Freddy
+import Valet
 
 // Central router to create URLRequestConvertible requests
 class WebServices: NSObject {
@@ -32,7 +33,53 @@ class WebServices: NSObject {
     
     
     // Store auth token
-    private var authToken: String?
+    fileprivate var authToken: String? {
+        get {
+            let myValet = VALValet(identifier: Constants.keychainIdentifier, accessibility: .whenUnlocked)
+            
+            if let authTokenString = myValet?.string(forKey: Constants.authToken) {
+                return authTokenString
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            let myValet = VALValet(identifier: Constants.keychainIdentifier, accessibility: .whenUnlocked)
+            
+            if let newValue = newValue {
+                myValet?.setString(newValue, forKey: Constants.authToken)
+            } else {
+                myValet?.removeObject(forKey: Constants.authToken)
+            }
+        }
+    }
+    
+    
+    fileprivate var authTokenExpireDate: String? {
+        get {
+            let myValet = VALValet(identifier: Constants.keychainIdentifier, accessibility: .whenUnlocked)
+            
+            if let authExpireDate = myValet?.string(forKey: Constants.authTokenExpireDate) {
+                return authExpireDate
+            } else {
+                return nil
+            }
+        }
+        
+        set {
+            let myValet = VALValet(identifier: Constants.keychainIdentifier, accessibility: .whenUnlocked)
+            
+            if let newValue = newValue {
+                myValet?.setString(newValue, forKey: Constants.authTokenExpireDate)
+            } else {
+                myValet?.removeObject(forKey: Constants.authTokenExpireDate)
+            }
+        }
+    }
+    
+    
+    
     
     func setAuthToken(_ token: String?) {
         authToken = token
