@@ -81,8 +81,50 @@ class WebServices: NSObject {
     
     
     
-    func setAuthToken(_ token: String?) {
+    func setAuthToken(_ token: String?, expiration: String?) {
         authToken = token
+        authTokenExpireDate = expiration
+    }
+    
+    
+    // Step 7: function to check for authToken
+    func userAuthTokenExists() -> Bool {
+        if self.authToken != nil {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    // Step 7: function to check if authToken is expired
+    func userAuthTokenExpired() -> Bool {
+        if self.authTokenExpireDate != nil {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            
+            let dateString = self.authTokenExpireDate!
+            if let expireDate = dateFormatter.date(from: dateString) {
+                let hourFromNow = Date().addingTimeInterval(3600)
+                
+                if expireDate.compare(hourFromNow) == ComparisonResult.orderedAscending {
+                    return true
+                } else {
+                    return false
+                }
+            } else {
+                return true
+            }
+        } else {
+            return true
+        }
+    }
+    
+    // Step 7: function to clear the auth token
+    func clearUserAuthToken() {
+        if self.userAuthTokenExists() {
+            self.authToken = nil
+        }
     }
     
     // AuthRouter - all network calls go through this
