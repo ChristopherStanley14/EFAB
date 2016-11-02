@@ -16,11 +16,17 @@ class BudgetListViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     
-
+    
+    let refreshControl = UIRefreshControl()
+    var currentDate = Utils.adjustedTime()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        refreshControl.addTarget(self, action: #selector(BudgetListViewController.loadCategories), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +35,11 @@ class BudgetListViewController: UIViewController {
         if !WebServices.shared.userAuthTokenExists() || WebServices.shared.userAuthTokenExpired() {
             performSegue(withIdentifier: "PresentLoginNoAnimation", sender: self)
         }
+    }
+    
+    func loadCategories() {
+        print("refresh")
+        self.refreshControl.endRefreshing()
     }
 
     

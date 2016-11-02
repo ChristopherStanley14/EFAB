@@ -29,6 +29,7 @@
 		B9DC24401DCA67B800BA04E1 /* CatagoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC243F1DCA67B800BA04E1 /* CatagoryCell.swift */; };
 		B9DC24421DCA6DF700BA04E1 /* AddCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24411DCA6DF700BA04E1 /* AddCatagoryViewController.swift */; };
 		B9DC24441DCA71ED00BA04E1 /* ;.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24431DCA71ED00BA04E1 /* ;.swift */; };
+		B9DC24461DCA806400BA04E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24451DCA806400BA04E1 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B9DC243F1DCA67B800BA04E1 /* CatagoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatagoryCell.swift; path = TableCells/CatagoryCell.swift; sourceTree = "<group>"; };
 		B9DC24411DCA6DF700BA04E1 /* AddCatagoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCatagoryViewController.swift; path = ViewControllers/AddCatagoryViewController.swift; sourceTree = "<group>"; };
 		B9DC24431DCA71ED00BA04E1 /* ;.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ";.swift"; path = "ViewControllers/;.swift"; sourceTree = "<group>"; };
+		B9DC24451DCA806400BA04E1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				B936B0B41DC7C88D0051F123 /* Test.swift */,
 				B9DC24381DCA223900BA04E1 /* User.swift */,
+				B9DC24451DCA806400BA04E1 /* Category.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				B9158ED41DC92F13005D19D5 /* RegisterViewController.swift in Sources */,
 				B936B0B01DC7BB420051F123 /* NetworkModel.swift in Sources */,
+				B9DC24461DCA806400BA04E1 /* Category.swift in Sources */,
 				B950E0FC1DC793AE00651F32 /* ViewController.swift in Sources */,
 				B936B0B51DC7C88D0051F123 /* Test.swift in Sources */,
 				B9158EC91DC8D59C005D19D5 /* WebServicesExtension.swift in Sources */,
