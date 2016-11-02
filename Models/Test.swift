@@ -18,6 +18,8 @@ class Test : NetworkModel {
     var title : String?
     var body : String?
     
+   
+    
     // Request Type
     enum RequestType {
         case getPost
@@ -36,6 +38,8 @@ class Test : NetworkModel {
         id = try? json.getInt(at: Constants.Test.id)
         title = try? json.getString(at: Constants.Test.title)
         body = try? json.getString(at: Constants.Test.body)
+        
+
     }
     
     // Always return HTTP.GET
