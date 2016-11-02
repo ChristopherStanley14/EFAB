@@ -26,6 +26,9 @@
 		B9DC24391DCA223900BA04E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24381DCA223900BA04E1 /* User.swift */; };
 		B9DC243B1DCA2E5F00BA04E1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC243A1DCA2E5F00BA04E1 /* Utils.swift */; };
 		B9DC243D1DCA355400BA04E1 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC243C1DCA355400BA04E1 /* UserStore.swift */; };
+		B9DC24401DCA67B800BA04E1 /* CatagoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC243F1DCA67B800BA04E1 /* CatagoryCell.swift */; };
+		B9DC24421DCA6DF700BA04E1 /* AddCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24411DCA6DF700BA04E1 /* AddCatagoryViewController.swift */; };
+		B9DC24441DCA71ED00BA04E1 /* ;.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24431DCA71ED00BA04E1 /* ;.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		B9DC24381DCA223900BA04E1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		B9DC243A1DCA2E5F00BA04E1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Components/Utils.swift; sourceTree = "<group>"; };
 		B9DC243C1DCA355400BA04E1 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Components/UserStore.swift; sourceTree = "<group>"; };
+		B9DC243F1DCA67B800BA04E1 /* CatagoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CatagoryCell.swift; path = TableCells/CatagoryCell.swift; sourceTree = "<group>"; };
+		B9DC24411DCA6DF700BA04E1 /* AddCatagoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCatagoryViewController.swift; path = ViewControllers/AddCatagoryViewController.swift; sourceTree = "<group>"; };
+		B9DC24431DCA71ED00BA04E1 /* ;.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ";.swift"; path = "ViewControllers/;.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 				B9158ED11DC92EB5005D19D5 /* LoginViewController.swift */,
 				B9158ED31DC92F13005D19D5 /* RegisterViewController.swift */,
 				B9158ED51DC92F22005D19D5 /* BudgetListViewController.swift */,
+				B9DC24411DCA6DF700BA04E1 /* AddCatagoryViewController.swift */,
+				B9DC24431DCA71ED00BA04E1 /* ;.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 		B950E0ED1DC793AE00651F32 = {
 			isa = PBXGroup;
 			children = (
+				B9DC243E1DCA676000BA04E1 /* Table Cells */,
 				B9158ED01DC92E4F005D19D5 /* View Controllers */,
 				B9158ECD1DC9202A005D19D5 /* Storyboards */,
 				B936B0B61DC7CB4D0051F123 /* Components */,
@@ -152,6 +161,14 @@
 				B950E1051DC793AE00651F32 /* Info.plist */,
 			);
 			path = EFAB;
+			sourceTree = "<group>";
+		};
+		B9DC243E1DCA676000BA04E1 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B9DC243F1DCA67B800BA04E1 /* CatagoryCell.swift */,
+			);
+			name = "Table Cells";
 			sourceTree = "<group>";
 		};
 		CAB5CC594A6A372A4B28CDAC /* Pods */ = {
@@ -314,11 +331,14 @@
 				B9158ED21DC92EB5005D19D5 /* LoginViewController.swift in Sources */,
 				B936B0B21DC7BEBF0051F123 /* WebServices.swift in Sources */,
 				B950E0FA1DC793AE00651F32 /* AppDelegate.swift in Sources */,
+				B9DC24421DCA6DF700BA04E1 /* AddCatagoryViewController.swift in Sources */,
 				B936B0B81DC7CB710051F123 /* Constants.swift in Sources */,
 				B9158ED61DC92F22005D19D5 /* BudgetListViewController.swift in Sources */,
 				B9DC24391DCA223900BA04E1 /* User.swift in Sources */,
 				B9DC243B1DCA2E5F00BA04E1 /* Utils.swift in Sources */,
+				B9DC24441DCA71ED00BA04E1 /* ;.swift in Sources */,
 				B9DC243D1DCA355400BA04E1 /* UserStore.swift in Sources */,
+				B9DC24401DCA67B800BA04E1 /* CatagoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

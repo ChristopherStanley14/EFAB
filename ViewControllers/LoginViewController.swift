@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -39,7 +40,35 @@ class LoginViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func loginButton(_ sender: Any) {
-    }
+        guard let username = usernameTextField.text, username != "" else {
+            // show error
+            let alert = Utils.createAlert("Login Error", message: "Please provide a username", dismissButtonTitle: "Close")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        guard let password = passwordTextField.text, password != "" else {
+            present(Utils.createAlert("Login Error", message: "Please provide a password"), animated: true, completion: nil)
+            return
+        }
+        
+        MBProgressHUD.showAdded(to: view, animated: true)
+        let user = User(username: username, password: password)
+        UserStore.shared.login(user) { (success, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            } else if let error = error {
+                self.present(Utils.createAlert(message: error), animated: true, completion: nil)
+            } else {
+                self.present(Utils.createAlert(message: Constants.JSON.unknownError), animated: true, completion: nil)
+                
+            }
+        }
+        }
+        
+    
     @IBAction func registerButton(_ sender: Any) {
     }
 }
