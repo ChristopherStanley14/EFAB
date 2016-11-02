@@ -24,6 +24,8 @@
 		B950E1011DC793AE00651F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B950E1001DC793AE00651F32 /* Assets.xcassets */; };
 		B950E1041DC793AE00651F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B950E1021DC793AE00651F32 /* LaunchScreen.storyboard */; };
 		B9DC24391DCA223900BA04E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC24381DCA223900BA04E1 /* User.swift */; };
+		B9DC243B1DCA2E5F00BA04E1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC243A1DCA2E5F00BA04E1 /* Utils.swift */; };
+		B9DC243D1DCA355400BA04E1 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC243C1DCA355400BA04E1 /* UserStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		B950E1031DC793AE00651F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B950E1051DC793AE00651F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9DC24381DCA223900BA04E1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		B9DC243A1DCA2E5F00BA04E1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Components/Utils.swift; sourceTree = "<group>"; };
+		B9DC243C1DCA355400BA04E1 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Components/UserStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				B936B0B71DC7CB710051F123 /* Constants.swift */,
+				B9DC243A1DCA2E5F00BA04E1 /* Utils.swift */,
+				B9DC243C1DCA355400BA04E1 /* UserStore.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 				B936B0B81DC7CB710051F123 /* Constants.swift in Sources */,
 				B9158ED61DC92F22005D19D5 /* BudgetListViewController.swift in Sources */,
 				B9DC24391DCA223900BA04E1 /* User.swift in Sources */,
+				B9DC243B1DCA2E5F00BA04E1 /* Utils.swift in Sources */,
+				B9DC243D1DCA355400BA04E1 /* UserStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
