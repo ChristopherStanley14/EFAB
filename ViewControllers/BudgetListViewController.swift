@@ -25,6 +25,11 @@ class BudgetListViewController: UIViewController {
     }
 
     
+    @IBAction func logoutTapped(_ sender: Any) {
+        UserStore.shared.logout {
+            self.performSegue(withIdentifier: "PresentLogin", sender: self)
+        }
+    }
     
 
     /*

@@ -22,7 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fnj-wQ-9WW"/>
+                    <navigationItem key="navigationItem" id="Fnj-wQ-9WW">
+                        <barButtonItem key="leftBarButtonItem" image="logout" id="oaK-DQ-iGf">
+                            <connections>
+                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="wZJ-XP-TuC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="3kd-Xv-Nmq" kind="presentation" identifier="PresentLogin" id="B1Y-Qr-sL9"/>
                         <segue destination="3kd-Xv-Nmq" kind="presentation" identifier="PresentLoginNoAnimation" animates="NO" id="0Ux-0C-OfV"/>
@@ -59,7 +65,10 @@
             <point key="canvasLocation" x="175" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logout" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Ux-0C-OfV"/>
+        <segue reference="B1Y-Qr-sL9"/>
     </inferredMetricsTieBreakers>
 </document>
