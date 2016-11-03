@@ -10,6 +10,7 @@ import UIKit
 
 class BudgetListViewController: UIViewController {
     
+    // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeControl: UISegmentedControl!
@@ -20,6 +21,14 @@ class BudgetListViewController: UIViewController {
     let refreshControl = UIRefreshControl()
     var currentDate = Utils.adjustedTime()
     
+    let weekIndex = 0
+    let monthIndex = 1
+    
+    var weekCategories: [Date: [Category]] = [:]
+    var monthCategories: [Date: [Category]] = [:]
+    
+    
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +36,8 @@ class BudgetListViewController: UIViewController {
         
         refreshControl.addTarget(self, action: #selector(BudgetListViewController.loadCategories), for: .valueChanged)
         tableView.addSubview(refreshControl)
+        
+        dateLabel.text = getDateRange()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,11 +48,7 @@ class BudgetListViewController: UIViewController {
         }
     }
     
-    func loadCategories() {
-        print("refresh")
-        self.refreshControl.endRefreshing()
-    }
-
+    // MARK: - IBActions
     
     @IBAction func logoutTapped(_ sender: Any) {
         UserStore.shared.logout {
@@ -50,12 +57,93 @@ class BudgetListViewController: UIViewController {
     }
     
     @IBAction func backTapped(_ sender: Any) {
+        switch timeControl.selectedSegmentIndex {
+        case weekIndex:
+            currentDate = currentDate.dateBySubtractingDays(7)
+        default:
+            let day = currentDate.day()
+            currentDate = currentDate.dateAtTheStartOfMonth().dateBySubtractingDays(1)
+            currentDate = currentDate.dateAtTheStartOfMonth().dateByAddingDays(min(day - 1, currentDate.monthDays() - 1))
+        }
+        setupDateHeader()
     }
     
     @IBAction func forwardTapped(_ sender: Any) {
+        switch timeControl.selectedSegmentIndex {
+        case weekIndex:
+            currentDate = currentDate.dateByAddingDays(7)
+        default:
+            let day = currentDate.day()
+            currentDate = currentDate.dateAtTheStartOfMonth().dateByAddingDays(currentDate.monthDays())
+            currentDate = currentDate.dateByAddingDays(min(day - 1, currentDate.monthDays() - 1))
+        }
+        setupDateHeader()
     }
     
     @IBAction func timePeriodChange(_ sender: Any) {
+        setupDateHeader()
+    }
+    
+    // MARK: - Methods
+    
+    func loadCategories() {
+        print("refresh")
+        self.refreshControl.endRefreshing()
+    }
+    
+    fileprivate func getDateRange() -> String {
+        let timePeriod = timeControl.selectedSegmentIndex
+        switch timePeriod {
+        case weekIndex:
+            let startDate = currentDate.dateAtStartOfWeek()
+            let endDate = currentDate.dateAtEndOfWeek()
+            let startMonth = startDate.toString(.custom("MMM"))
+            let endMonth = endDate.toString(.custom("MMM"))
+            if startDate.year() == endDate.year() {
+                if startDate.month() == endDate.month() {
+                    return "\(startMonth) \(startDate.day()) - \(endDate.day()), \(startDate.year())"
+                } else {
+                    return "\(startMonth) \(startDate.day()) - \(endMonth) \(endDate.day()), \(startDate.year())"
+                }
+            } else {
+                return "\(startMonth) \(startDate.day()), \(startDate.year()) - \(endMonth) \(endDate.day()), \(endDate.year())"
+            }
+        default:
+            return "\(currentDate.toString(.custom("MMM"))) \(currentDate.year())"
+        }
+    }
+    
+    
+    fileprivate func setupDateHeader() {
+        switch timeControl.selectedSegmentIndex {
+        case weekIndex:
+            if currentDate.isSameWeekAsDate(Date()) {
+                currentDate = Utils.adjustedTime()
+            }
+            
+            if !getCurrentWeek().isEmpty {
+                tableView.reloadData()
+            }
+        default:
+            if currentDate.month() == Date().month() && currentDate.year() == Date().year() {
+                currentDate = Utils.adjustedTime()
+            }
+            
+            if !getCurrentMonth().isEmpty {
+                tableView.reloadData()
+            }
+        }
+        dateLabel.text = getDateRange()
+        loadCategories()
+    }
+    
+    
+    fileprivate func getCurrentWeek() -> [Category] {
+        return weekCategories[currentDate.dateAtStartOfWeek().dateAtStartOfDay()] ?? []
+    }
+    
+    fileprivate func getCurrentMonth() -> [Category] {
+        return monthCategories[currentDate.dateAtTheStartOfMonth().dateAtStartOfDay()] ?? []
     }
     
     
