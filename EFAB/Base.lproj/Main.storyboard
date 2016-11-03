@@ -52,7 +52,7 @@
                                         <connections>
                                             <outlet property="amountLabel" destination="gAv-cE-gIz" id="FR2-Vl-qth"/>
                                             <outlet property="nameLabel" destination="bgW-KK-5KI" id="JN7-rJ-QSX"/>
-                                            <segue destination="CW8-JY-5Wq" kind="show" id="vCf-8M-aCr"/>
+                                            <segue destination="CW8-JY-5Wq" kind="show" identifier="ShowAddExpense" id="vCf-8M-aCr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
