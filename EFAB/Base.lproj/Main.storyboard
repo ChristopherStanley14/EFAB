@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="941.60000000000002" y="123.68815592203899"/>
         </scene>
-        <!--Add Catagory View Controller-->
+        <!--Add Category View Controller-->
         <scene sceneID="kRP-Sb-XK9">
             <objects>
-                <viewController id="kcD-Yt-L6A" customClass="AddCatagoryViewController" customModule="EFAB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kcD-Yt-L6A" customClass="AddCategoryViewController" customModule="EFAB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O4m-ck-Wde"/>
                         <viewControllerLayoutGuide type="bottom" id="1TP-rF-buz"/>
@@ -151,7 +151,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kcD-Yt-L6A" id="Jyh-WK-02y"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount per Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWW-d0-LjO">
                                 <rect key="frame" x="38" y="188" width="291" height="30"/>
@@ -159,6 +162,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kcD-Yt-L6A" id="9Q6-4P-zWL"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
